@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../fonts/fonte.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("../img/backcadastro.jpg") center center / cover no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+body.body-modal-aberto {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.voltar {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.voltar:hover {
+    color: #c29708;
+    transform: scale(1.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+form {
+    width: 428px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    padding: 30px 45px;
+    color: #fff;
+    backdrop-filter: blur(3px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px;
+}
+
+.title {
+    font-family: 'MinhaFonte';
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing:2px;
+    text-align: center;
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.267);
+    border-radius: 40px;
+    font-size: 14px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.box input::placeholder {
+    color: #d8d8d8;
+}
+
+.box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.uso {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #c29708;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 650;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 15px;
+    transition: 0.4s;
+}
+
+.login:hover {
+    background-color: #c29708;
+    color: #000000;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.termo {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(32, 32, 32, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.termo.abrir {
+    display: flex;
+}
+
+.modal {
+    background-color: rgba(17, 17, 17, 0.95);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 60px 100px;
+    border-radius: 10px;
+    position: relative;
+    color: #bebebe;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bx-x {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.bx-x:hover {
+    color: #3f2400;
+    background: #c29708;
+    border: 1px solid #3f2400;
+    border-radius: 50%;
+    transform: scale(1.3);
+}
+
+.paragrafo {
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.list ul{
+    margin-left: 20px;
+}
